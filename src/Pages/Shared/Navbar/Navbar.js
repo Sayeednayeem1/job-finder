@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div>
+        <div className='max-w-[1440px] mx-auto'>
             <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">

@@ -1,11 +1,11 @@
-
 import { RouterProvider } from 'react-router-dom';
-import './App.css';
 import { router } from './Router/Router';
 
 function App() {
   return (
-    <div className='max-w-[1440px]	mx-auto'>
+    <div className='bg-[#EAECFF]' style={{
+      height: '100vh'
+    }}>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

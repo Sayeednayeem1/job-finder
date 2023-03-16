@@ -5,6 +5,7 @@ import Dev3 from '../../../../assets/Images/Experienced-Job-Assets/Dev3.svg';
 import Dev4 from '../../../../assets/Images/Experienced-Job-Assets/Dev4.svg';
 import Dev5 from '../../../../assets/Images/Experienced-Job-Assets/Dev5.svg';
 import Dev6 from '../../../../assets/Images/Experienced-Job-Assets/Dev6.svg';
+import ExperiencedJob from './ExperiencedJob';
 
 const ExperiencedJobs = () => {
 
@@ -55,12 +56,20 @@ const ExperiencedJobs = () => {
 
     return (
         <div>
-            <div>
+            <div className='mt-24 mb-16'>
                 <div>
-
-                </div>
-                <div>
-                    
+                    <div className='text-center'>
+                        <h1 className='text-5xl font-bold mb-5'>Discover Jobs For You</h1>
+                        <p className='text-[#176CCF] font-bold'>Browse 300+ Top Jobs For The Experienced!</p>
+                    </div>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1440px] mx-auto px-5 md:px-0 mt-12'>
+                        {
+                            experiencedJobsData.map(data => <ExperiencedJob
+                                key={data.id}
+                                data={data}
+                            ></ExperiencedJob>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>

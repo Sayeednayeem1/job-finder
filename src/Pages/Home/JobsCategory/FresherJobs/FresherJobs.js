@@ -48,8 +48,16 @@ const FresherJobs = () => {
     ]
 
     return (
-        <div>
-            <h1>Fresher.</h1>
+        <div className='mt-24 mb-16'>
+            <div>
+                <div className='text-center'>
+                    <h1 className='text-5xl font-bold mb-5'>Discover Jobs For You</h1>
+                    <p className='text-[#176CCF] font-bold'>Browse 200+ Top Jobs For Freshers</p>
+                </div>
+                <div>
+
+                </div>
+            </div>
         </div>
     );
 };

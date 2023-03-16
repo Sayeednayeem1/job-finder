@@ -1,4 +1,5 @@
 import React from 'react';
+import { CiLocationOn } from "react-icons/ci";
 
 const FresherJob = ({ data }) => {
     const { name, location, companyName, logo } = data;
@@ -10,9 +11,10 @@ const FresherJob = ({ data }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
+                    <p className='text-2xl flex items-center'><CiLocationOn className='mr-2' /> {location}</p>
+                    <p className='text-2xl flex items-center'>Company: {companyName}</p>
+                    <div className="card-actions mt-4">
+                        <input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" value='Apply' type="text" />
                     </div>
                 </div>
             </div>

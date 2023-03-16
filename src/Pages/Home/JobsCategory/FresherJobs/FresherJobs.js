@@ -52,7 +52,7 @@ const FresherJobs = () => {
             companyName: "IT Farm Tech",
             logo: Dev6
         }
-    ]
+    ];
 
     return (
         <div className='mt-24 mb-16'>

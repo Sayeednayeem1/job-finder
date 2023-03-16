@@ -61,7 +61,7 @@ const FresherJobs = () => {
                     <h1 className='text-5xl font-bold mb-5'>Discover Jobs For You</h1>
                     <p className='text-[#176CCF] font-bold'>Browse 200+ Top Jobs For Freshers</p>
                 </div>
-                <div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1440px] mx-auto px-5 md:px-0'>
                     {
                         fresherJobsData.map(data => <FresherJob
                             key={data.id}

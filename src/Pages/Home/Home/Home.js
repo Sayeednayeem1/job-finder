@@ -3,6 +3,7 @@ import Banner from '../Banner/Banner';
 import BuildJobBoard from '../BuildJobBoard/BuildJobBoard';
 import ExperiencedJobs from '../JobsCategory/ExperiencedJobs/ExperiencedJobs';
 import FresherJobs from '../JobsCategory/FresherJobs/FresherJobs';
+import Subscribe from '../Subscribe/Subscribe';
 
 const Home = () => {
     return (
@@ -10,7 +11,8 @@ const Home = () => {
             <Banner />
             <FresherJobs />
             <BuildJobBoard />
-            <ExperiencedJobs></ExperiencedJobs>
+            <ExperiencedJobs />
+            <Subscribe />
         </div>
     );
 };

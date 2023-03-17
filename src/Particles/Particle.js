@@ -60,7 +60,7 @@ const Particle = () => {
                             color: "#000000",
                             distance: 150,
                             enable: true,
-                            opacity: 0.05,
+                            opacity: 0.08,
                             width: 1,
                         },
                         collisions: {

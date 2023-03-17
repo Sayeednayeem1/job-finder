@@ -16,7 +16,7 @@ const Banner = () => {
                                 <input type="text" placeholder="Job Title" className="input w-full max-w-xs" />
                                 <input type="text" placeholder="Category" className="input w-full max-w-xs" />
                                 <input type="text" placeholder="Location" className="input w-full max-w-xs" />
-                                <input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" value='Search' type="text" />
+                                <input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" readOnly value='Search' type="text" />
                             </form>
                         </div>
                     </div>

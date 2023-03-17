@@ -38,5 +38,9 @@ export const router = createBrowserRouter([
                 element: <ApplyForm></ApplyForm>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <p>this is a test</p>
     }
 ])

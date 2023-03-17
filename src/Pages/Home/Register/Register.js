@@ -1,22 +1,59 @@
-import React, { useState } from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider';
 
 const Register = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const { createUser, updateUser, googleLogin } = useContext(AuthContext);
 
     // todo registration error
     const [registrationError, setRegistrationError] = useState('');
 
+    const googleProvider = new GoogleAuthProvider();
+
+    // todo navigation sector
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
     // todo handle signup with email and password
     const handleSignup = data => {
         console.log(data);
+        setRegistrationError('');
+        createUser(data.email, data.password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+                toast("User created successfully");
+                const userInfo = {
+                    displayName: data.name
+                };
+                updateUser(userInfo)
+                    .then(() => { })
+                    .catch(error => console.error(error));
+            })
+            .catch(error => {
+                console.error(error.message);
+                setRegistrationError(error.message)
+            });
     };
 
     // todo handle google signup
     const handleGoogleSignUp = data => {
         console.log(data);
+        googleLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.error(error));
     }
 
     return (

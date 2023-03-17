@@ -1,12 +1,16 @@
 import { Toaster } from 'react-hot-toast';
 import { RouterProvider } from 'react-router-dom';
+import Particle from './Particles/Particle';
 import { router } from './Router/Router';
 
 function App() {
   return (
     <div className='bg-[#E9EEF1] bg-cover'>
-      <RouterProvider router={router}></RouterProvider>
-      <Toaster></Toaster>
+      <Particle></Particle>
+      <div>
+        <RouterProvider router={router}></RouterProvider>
+        <Toaster></Toaster>
+      </div>
     </div>
   );
 }

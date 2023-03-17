@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import logo from "../../../assets/Images/logo.png";
 import Time from '../../../Time/Time';
 
 const Navbar = () => {
@@ -39,7 +40,11 @@ const Navbar = () => {
                                 {navItems}
                             </ul>
                         </div>
-                        <Link to="/" className='md:text-2xl font-bold'>Nay Tech Org</Link>
+                        <div className="avatar">
+                            <div className="w-16 rounded-full">
+                                <img src={logo} alt="logo" />
+                            </div>
+                        </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">

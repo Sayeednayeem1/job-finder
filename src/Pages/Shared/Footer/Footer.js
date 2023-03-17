@@ -1,5 +1,5 @@
 import React from 'react';
-import footerIcon from '../../../assets/Images/Fresher-Job-Assets/Dev1.svg';
+import footerIcon from '../../../assets/Images/logo.png';
 
 const Footer = () => {
     return (

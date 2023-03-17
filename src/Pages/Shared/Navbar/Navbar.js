@@ -15,14 +15,14 @@ const Navbar = () => {
 
 
     const navItems = <React.Fragment>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/about'>About</Link></li>
-        <li><Link to='/contactUs'>Contact Us</Link></li>
+        <li className="text-xl font-bold"><Link to='/'>Home</Link></li>
+        <li className="text-xl font-bold"><Link to='/about'>About</Link></li>
+        <li className="text-xl font-bold"><Link to='/contactUs'>Contact Us</Link></li>
         {
             user?.uid ?
-                <li><button onClick={handleLogout}>Log Out</button></li>
+                <li className="text-xl font-bold"><button onClick={handleLogout}>Log Out</button></li>
                 :
-                <li><Link to='/login'>Login</Link></li>
+                <li className="text-xl font-bold"><Link to='/login'>Login</Link></li>
         }
     </React.Fragment>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                                 {navItems}
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                        <Link to="/" className='md:text-2xl font-bold'>Nay Tech Org</Link>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -49,9 +49,9 @@ const Navbar = () => {
                     <div className="navbar-end">
                         {
                             user?.displayName ?
-                                <h1 className='font-bold'>{user?.displayName}</h1>
+                                <h1 className='text-xl font-bold'>{user?.displayName}</h1>
                                 :
-                                <Time></Time>
+                                <Time className="text-xl font-bold"></Time>
                         }
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import ContactUs from "../Pages/Home/ContactUs/ContactUs";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Home/Login/Login";
 import Register from "../Pages/Home/Register/Register";
+import PageNotFound from "../Pages/PageNotFound/PageNotFound";
 
 
 export const router = createBrowserRouter([
@@ -41,6 +42,6 @@ export const router = createBrowserRouter([
     },
     {
         path: '*',
-        element: <p>this is a test</p>
+        element: <PageNotFound></PageNotFound>
     }
 ])

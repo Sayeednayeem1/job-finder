@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import Time from '../../../Time/Time';
 
 const Navbar = () => {
 
@@ -46,7 +47,12 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <h1>{user?.displayName}</h1>
+                        {
+                            user?.displayName ?
+                                <h1 className='font-bold'>{user?.displayName}</h1>
+                                :
+                                <Time></Time>
+                        }
                     </div>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from 'react-router-dom';
 
 const ExperiencedJob = ({ data }) => {
 
@@ -16,7 +17,7 @@ const ExperiencedJob = ({ data }) => {
                     <p className='text-2xl flex items-center'><CiLocationOn className='mr-2' /> {location}</p>
                     <p className='text-2xl flex items-center'>Company: {companyName}</p>
                     <div className="card-actions mt-4">
-                        <input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" value='Apply' type="text" />
+                        <Link to='/applyForm'><input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" value='Apply' readOnly type="text" /></Link>
                     </div>
                 </div>
             </div>

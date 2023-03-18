@@ -2,9 +2,9 @@ import React from 'react';
 import { CiLocationOn } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 
-const TopItCompany = ({ data }) => {
+const TopItCompanyBD = ({ data }) => {
 
-    const { name, location, companyName, logo } = data;
+    const { name, location, logo } = data;
 
     return (
         <div>
@@ -15,7 +15,6 @@ const TopItCompany = ({ data }) => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
                     <p className='text-2xl flex items-center'><CiLocationOn className='mr-2' /> {location}</p>
-                    <p className='text-2xl flex items-center'>Company: {companyName}</p>
                     <div className="card-actions mt-4">
                         <Link to='/applyForm'><input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" value='Visit' readOnly type="text" /></Link>
                     </div>
@@ -25,4 +24,4 @@ const TopItCompany = ({ data }) => {
     );
 };
 
-export default TopItCompany;
+export default TopItCompanyBD;

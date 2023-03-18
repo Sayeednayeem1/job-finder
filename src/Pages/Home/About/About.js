@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from '../../../assets/Images/man-using-digital-tablet.jpg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
+
+    // todo AOS animation
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
-        <div className='max-w-[1440px] mx-auto'>
+        <div className='max-w-[1440px] mx-auto' data-aos="fade-down" data-aos-easing="linear">
             <div className='mx-4 mt-12 md:mt-32 mb-36'>
                 <div className='flex flex-col md:flex-row items-center'>
                     <div className='mr-0 md:mr-28'>

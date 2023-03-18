@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import FresherJob from './FresherJob';
 import Dev1 from '../../../../assets/Images/Fresher-Job-Assets/Dev1.svg';
 import Dev2 from '../../../../assets/Images/Fresher-Job-Assets/Dev2.svg';
@@ -6,8 +6,15 @@ import Dev3 from '../../../../assets/Images/Fresher-Job-Assets/Dev3.svg';
 import Dev4 from '../../../../assets/Images/Fresher-Job-Assets/Dev4.svg';
 import Dev5 from '../../../../assets/Images/Fresher-Job-Assets/Dev5.svg';
 import Dev6 from '../../../../assets/Images/Fresher-Job-Assets/Dev6.svg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const FresherJobs = () => {
+
+    // todo AOS animation
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
 
     const fresherJobsData = [
         {
@@ -55,7 +62,7 @@ const FresherJobs = () => {
     ];
 
     return (
-        <div className='mt-24 mb-16'>
+        <div className='mt-24 mb-16' data-aos="fade-up" data-aos-easing="linear">
             <div>
                 <div className='text-center'>
                     <h1 className='text-5xl font-bold mb-5'>Discover Jobs For You</h1>

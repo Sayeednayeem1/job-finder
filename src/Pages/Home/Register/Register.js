@@ -1,10 +1,12 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import Spinner from '../../../ReactSpinner/Spinner';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Register = () => {
 
@@ -13,6 +15,11 @@ const Register = () => {
 
     // todo registration error
     const [registrationError, setRegistrationError] = useState('');
+
+    // todo AOS animation
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
 
     const googleProvider = new GoogleAuthProvider();
 
@@ -64,7 +71,7 @@ const Register = () => {
 
     return (
         <div>
-            <div className='h-[680px]  flex justify-center items-center'>
+            <div className='h-[680px]  flex justify-center items-center' data-aos="fade-down" data-aos-easing="linear">
                 <div className='w-96  shadow-xl p-6'>
                     <h1 className='text-xl text-center'>Signup</h1>
                     <form onSubmit={handleSubmit(handleSignup)}>

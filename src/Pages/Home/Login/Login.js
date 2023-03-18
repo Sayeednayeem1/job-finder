@@ -1,12 +1,18 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import Spinner from '../../../ReactSpinner/Spinner';
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 const Login = () => {
+
+    // todo AOS animation
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, [])
 
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { loginUser, googleLogin, loading } = useContext(AuthContext);
@@ -58,7 +64,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className='h-[690px]  flex justify-center items-center'>
+            <div className='h-[690px]  flex justify-center items-center' data-aos="fade-down" data-aos-easing="linear">
                 <div className='w-96  shadow-xl p-6'>
                     <h1 className='text-xl text-center'>Login</h1>
                     <form onSubmit={handleSubmit(handleLogin)}>

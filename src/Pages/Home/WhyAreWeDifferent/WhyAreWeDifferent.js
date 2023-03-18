@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from "../../../assets/Images/Why-Different/Why-Different.jpg";
 import icon1 from '../../../assets/Images/Why-Different/icon1.svg';
 import icon2 from '../../../assets/Images/Why-Different/icon2.svg';
 import icon3 from '../../../assets/Images/Why-Different/icon3.svg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const WhyAreWeDifferent = () => {
+
+    // todo AOS animation
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
     return (
-        <div className='bg-blue-50 py-28'>
+        <div className='bg-blue-50 py-28' data-aos="zoom-in-up" data-aos-easing="linear">
             <div className='max-w-[1440px] mx-auto'>
                 <div className='flex flex-col md:flex-row  justify-between'>
                     <div className=''>

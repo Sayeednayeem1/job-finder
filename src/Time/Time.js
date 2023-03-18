@@ -7,7 +7,7 @@ const Time = () => {
         setInterval(() => setTime(new Date().toLocaleTimeString()), 1000);
     }, []);
 
-    return <div>{time}</div>
+    return <div className='text-xl font-bold'>{time}</div>
 }
 
 export default Time;

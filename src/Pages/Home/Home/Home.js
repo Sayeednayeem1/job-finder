@@ -4,6 +4,7 @@ import BuildJobBoard from '../BuildJobBoard/BuildJobBoard';
 import ExperiencedJobs from '../JobsCategory/ExperiencedJobs/ExperiencedJobs';
 import FresherJobs from '../JobsCategory/FresherJobs/FresherJobs';
 import Subscribe from '../Subscribe/Subscribe';
+import TopItCompanies from '../TopItCompanies/TopItCompanies';
 import WhyAreWeDifferent from '../WhyAreWeDifferent/WhyAreWeDifferent';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <FresherJobs />
             <BuildJobBoard />
             <ExperiencedJobs />
+            <TopItCompanies />
             <WhyAreWeDifferent />
             <Subscribe />
         </div>

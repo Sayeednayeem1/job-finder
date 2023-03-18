@@ -12,9 +12,11 @@ import { Link } from 'react-router-dom';
 
 const ExperiencedJobs = () => {
 
-    // todo AOS animation
+    // todo banner animation
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 2000 }, () => {
+            Aos.refresh();
+        });
     }, []);
 
     const experiencedJobsData = [

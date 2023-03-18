@@ -8,9 +8,11 @@ import 'aos/dist/aos.css';
 
 const WhyAreWeDifferent = () => {
 
-    // todo AOS animation
+    // todo banner animation
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 2000 }, () => {
+            Aos.refresh();
+        });
     }, []);
 
     return (

@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import company1 from '../../../assets/Images/Fresher-Job-Assets/Dev1.svg';
 import company2 from '../../../assets/Images/Fresher-Job-Assets/Dev2.svg';
 import company3 from '../../../assets/Images/Fresher-Job-Assets/Dev3.svg';
 import TopItCompanyBD from './TopItCompanyBD';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 const TopItCompanies = () => {
+
+    // todo banner animation
+    useEffect(() => {
+        Aos.init({ duration: 2000 }, () => {
+            Aos.refresh();
+        });
+    }, []);
+
     const topItCompanyData = [
         {
             id: 1,

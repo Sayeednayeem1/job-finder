@@ -4,9 +4,11 @@ import 'aos/dist/aos.css';
 
 const BrowseTopJobs = () => {
 
-    // todo AOS animation
+    // todo banner animation
     useEffect(() => {
-        Aos.init({ duration: 2000 });
+        Aos.init({ duration: 2000 }, () => {
+            Aos.refresh();
+        });
     }, []);
 
     return (

@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import logo from "../../../assets/Images/logo.png";
 import Time from '../../../Time/Time';
+import './ToggleBtn.css';
+import { ToggleButton } from '../../ToggleButton/ToggleButton';
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
+    // todo logout statement
     const handleLogout = () => {
         logOut()
             .then(() => { })
@@ -25,6 +28,7 @@ const Navbar = () => {
                 :
                 <li className="text-xl font-bold"><Link to='/login'>Login</Link></li>
         }
+        <ToggleButton></ToggleButton>
     </React.Fragment>
 
     return (

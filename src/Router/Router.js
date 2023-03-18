@@ -7,6 +7,7 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Home/Login/Login";
 import Register from "../Pages/Home/Register/Register";
 import PageNotFound from "../Pages/PageNotFound/PageNotFound";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -36,7 +37,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/applyForm',
-                element: <ApplyForm></ApplyForm>
+                element: <PrivateRoute><ApplyForm></ApplyForm></PrivateRoute>
             }
         ]
     },

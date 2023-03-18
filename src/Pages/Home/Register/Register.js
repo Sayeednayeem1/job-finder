@@ -4,11 +4,12 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import Spinner from '../../../ReactSpinner/Spinner';
 
 const Register = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { createUser, updateUser, googleLogin } = useContext(AuthContext);
+    const { createUser, updateUser, googleLogin, loading } = useContext(AuthContext);
 
     // todo registration error
     const [registrationError, setRegistrationError] = useState('');
@@ -54,6 +55,11 @@ const Register = () => {
                 navigate(from, { replace: true });
             })
             .catch(error => console.error(error));
+    };
+
+    // todo loading function
+    if (loading) {
+        return <Spinner></Spinner>;
     }
 
     return (

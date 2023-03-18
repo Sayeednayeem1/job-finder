@@ -4,11 +4,12 @@ import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import Spinner from '../../../ReactSpinner/Spinner';
 
 const Login = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { loginUser, googleLogin } = useContext(AuthContext);
+    const { loginUser, googleLogin, loading } = useContext(AuthContext);
 
     // todo login related error
     const [loginError, setLoginError] = useState('');
@@ -48,6 +49,11 @@ const Login = () => {
                 toast('Logged in successfully');
             })
             .catch(error => console.error(error));
+    };
+
+    // todo loading spinner
+    if (loading) {
+        return <Spinner></Spinner>;
     }
 
     return (

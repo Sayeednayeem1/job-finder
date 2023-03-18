@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import logo from "../../../assets/Images/logo.png";
 import Time from '../../../Time/Time';
-import './ToggleBtn.css';
 import { ToggleButton } from '../../ToggleButton/ToggleButton';
 
 const Navbar = () => {

@@ -8,6 +8,7 @@ import Dev6 from '../../../../assets/Images/Experienced-Job-Assets/Dev6.svg';
 import ExperiencedJob from './ExperiencedJob';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const ExperiencedJobs = () => {
 
@@ -78,6 +79,9 @@ const ExperiencedJobs = () => {
                         }
                     </div>
                 </div>
+            </div>
+            <div className='flex items-center justify-center mt-8 md:mt-12'>
+                <Link to='/'><input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" value='See All Jobs' readOnly type="text" /></Link>
             </div>
         </div>
     );

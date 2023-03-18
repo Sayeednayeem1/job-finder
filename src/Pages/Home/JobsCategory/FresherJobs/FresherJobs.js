@@ -8,6 +8,7 @@ import Dev5 from '../../../../assets/Images/Fresher-Job-Assets/Dev5.svg';
 import Dev6 from '../../../../assets/Images/Fresher-Job-Assets/Dev6.svg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const FresherJobs = () => {
 
@@ -75,6 +76,9 @@ const FresherJobs = () => {
                             data={data}
                         ></FresherJob>)
                     }
+                </div>
+                <div className='flex items-center justify-center mt-8 md:mt-12'>
+                    <Link to='/'><input className="btn btn-primary bg-gradient-to-r from-[#0FCFEC] to-[#19D3AE] text-white font-bold border-none" value='See All Jobs' readOnly type="text" /></Link>
                 </div>
             </div>
         </div>

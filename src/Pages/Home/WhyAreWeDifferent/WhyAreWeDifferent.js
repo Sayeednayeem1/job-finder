@@ -16,7 +16,7 @@ const WhyAreWeDifferent = () => {
     }, []);
 
     return (
-        <div className='bg-blue-50 py-28' data-aos="zoom-in-up" data-aos-easing="linear">
+        <div className='bg-blue-50 py-28' data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="500">
             <div className='max-w-[1440px] mx-auto'>
                 <div className='flex flex-col md:flex-row  justify-between'>
                     <div className=''>

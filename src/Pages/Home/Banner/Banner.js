@@ -16,7 +16,7 @@ const Banner = () => {
     return (
         <header>
             <div className='my-16'>
-                <div className="hero" data-aos="fade-down" data-aos-easing="linear">
+                <div className="hero" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="500">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src={banner} className="lg:w-1/2 rounded-lg shadow-2xl" alt='' />
                         <div>

@@ -12,7 +12,7 @@ const Subscribe = () => {
     }, []);
 
     return (
-        <div className='my-28' data-aos="zoom-in" data-aos-easing="linear">
+        <div className='my-28' data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="500">
             <div className='max-w-[1440px] mx-5 lg:mx-auto'>
                 <div className='text-center'>
                     <h1 className='text-4xl font-bold mb-3'>Subscribe our newsletter to get</h1>

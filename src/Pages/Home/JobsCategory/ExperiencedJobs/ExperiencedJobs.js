@@ -66,7 +66,7 @@ const ExperiencedJobs = () => {
 
     return (
         <div>
-            <div className='mt-24 mb-16' data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="linear">
+            <div className='mt-24 mb-16' data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="linear" data-aos-delay="500">
                 <div>
                     <div className='text-center'>
                         <h1 className='text-5xl font-bold mb-5'>Discover Jobs For You</h1>

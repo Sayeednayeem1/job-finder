@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import banner from '../../../assets/Images/Banner.jpg';
-import './Banner.css';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 
 const Banner = () => {
-
-    // todo banner animation
-    useEffect(() => {
-        Aos.init({ duration: 2000 }, () => {
-            Aos.refresh();
-        });
-    }, []);
 
     return (
         <header>
             <div className='my-16'>
-                <div className="hero" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="500">
+                <div className="hero" >
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src={banner} className="lg:w-1/2 rounded-lg shadow-2xl" alt='' />
                         <div>

@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../../contexts/AuthProvider';
+import Spinner from '../../../ReactSpinner/Spinner';
 import Banner from '../Banner/Banner';
 import BrowseTopJobs from '../BrowseTopJobs/BrowseTopJobs';
 import BuildJobBoard from '../BuildJobBoard/BuildJobBoard';
@@ -10,6 +12,7 @@ import TopItCompaniesWorld from '../TopItCompanyWorld/TopItCompaniesWorld';
 import WhyAreWeDifferent from '../WhyAreWeDifferent/WhyAreWeDifferent';
 
 const Home = () => {
+
     return (
         <div>
             <Banner />
